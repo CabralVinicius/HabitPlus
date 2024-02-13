@@ -8,11 +8,75 @@
 import SwiftUI
 
 struct SplashView: View {
+    
+    @State private var state: SplashUIState = .loading
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        switch state {
+        case .loading:
+            loadingView()
+        case .goToSignInScreen:
+            Text("Carregar tela de login")
+        case .goToHomeScreen:
+            Text("Carregar tela principal")
+        case.error(let msg):
+            Text("Mensagem de Erro: \(msg)")
+        }
     }
 }
 
 #Preview {
     SplashView()
+}
+
+
+
+//MARK: EXTENSIONS
+// 1.  Compartilhamento de Objetos
+// Usamos quando precisamos do componente reitulizado em outra parte do código, se não temos a necessidade de reutilizaro mesmo componente em outras partes do codigo, podemos usar variaveis e funções em extensions
+// struct
+struct LoadingView: View {
+    var body: some View {
+        ZStack{
+            Image("Logo")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(20)
+                .ignoresSafeArea()
+                .background(.red)
+        }
+    }
+}
+// MARK: - Qual a diferença de usa uma variavel e uma função para expor uma view?
+// Resposta: Nas funções podemos usar parametros, nas variaveis os valores são fixos e não podemos usar parametros.
+// 2. Criando por variavel de extenção
+extension SplashView {
+    var loading: some View {
+        ZStack{
+            Image("Logo")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(20)
+                .ignoresSafeArea()
+                .background(.blue)
+        }
+    }
+}
+
+// 3. Usando funções em extenções
+extension SplashView {
+    func loadingView() -> some View {
+        ZStack{
+            Image("Logo")
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(20)
+                .ignoresSafeArea()
+                .background(.green)
+        }
+    }
 }
