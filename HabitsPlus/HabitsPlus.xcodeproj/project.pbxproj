@@ -8,21 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		19CCF2B52B7ACE0A00DF534A /* HabitsPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCF2B42B7ACE0A00DF534A /* HabitsPlusApp.swift */; };
-		19CCF2B72B7ACE0A00DF534A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCF2B62B7ACE0A00DF534A /* ContentView.swift */; };
 		19CCF2B92B7ACE0D00DF534A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CCF2B82B7ACE0D00DF534A /* Assets.xcassets */; };
 		19CCF2BC2B7ACE0D00DF534A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CCF2BB2B7ACE0D00DF534A /* Preview Assets.xcassets */; };
 		19CCF2C72B7AD22200DF534A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCF2C62B7AD22200DF534A /* SplashView.swift */; };
 		19CCF2C92B7AD3BB00DF534A /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCF2C82B7AD3BB00DF534A /* SplashUIState.swift */; };
+		19D403E82B7BAA9E0006EFCD /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D403E72B7BAA9E0006EFCD /* SplashViewModel.swift */; };
+		19D403EE2B7BBD4C0006EFCD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D403ED2B7BBD4C0006EFCD /* SignInView.swift */; };
+		19D403F02B7BBD890006EFCD /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D403EF2B7BBD890006EFCD /* SignInViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19CCF2B12B7ACE0A00DF534A /* HabitsPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitsPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CCF2B42B7ACE0A00DF534A /* HabitsPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsPlusApp.swift; sourceTree = "<group>"; };
-		19CCF2B62B7ACE0A00DF534A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19CCF2B82B7ACE0D00DF534A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19CCF2BB2B7ACE0D00DF534A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		19CCF2C62B7AD22200DF534A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		19CCF2C82B7AD3BB00DF534A /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
+		19D403E72B7BAA9E0006EFCD /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		19D403ED2B7BBD4C0006EFCD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		19D403EF2B7BBD890006EFCD /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +59,9 @@
 		19CCF2B32B7ACE0A00DF534A /* HabitsPlus */ = {
 			isa = PBXGroup;
 			children = (
+				19D403E92B7BBCCE0006EFCD /* SignIn */,
 				19CCF2C22B7AD1D200DF534A /* Slash */,
 				19CCF2B42B7ACE0A00DF534A /* HabitsPlusApp.swift */,
-				19CCF2B62B7ACE0A00DF534A /* ContentView.swift */,
 				19CCF2B82B7ACE0D00DF534A /* Assets.xcassets */,
 				19CCF2BA2B7ACE0D00DF534A /* Preview Content */,
 			);
@@ -101,6 +105,40 @@
 		19CCF2C52B7AD1EB00DF534A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				19D403E72B7BAA9E0006EFCD /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		19D403E92B7BBCCE0006EFCD /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				19D403EC2B7BBD0C0006EFCD /* ViewModel */,
+				19D403EB2B7BBD030006EFCD /* Model */,
+				19D403EA2B7BBCFD0006EFCD /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		19D403EA2B7BBCFD0006EFCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19D403ED2B7BBD4C0006EFCD /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19D403EB2B7BBD030006EFCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19D403EC2B7BBD0C0006EFCD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				19D403EF2B7BBD890006EFCD /* SignInViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -175,10 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D403E82B7BAA9E0006EFCD /* SplashViewModel.swift in Sources */,
 				19CCF2C92B7AD3BB00DF534A /* SplashUIState.swift in Sources */,
-				19CCF2B72B7ACE0A00DF534A /* ContentView.swift in Sources */,
+				19D403F02B7BBD890006EFCD /* SignInViewModel.swift in Sources */,
 				19CCF2B52B7ACE0A00DF534A /* HabitsPlusApp.swift in Sources */,
 				19CCF2C72B7AD22200DF534A /* SplashView.swift in Sources */,
+				19D403EE2B7BBD4C0006EFCD /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

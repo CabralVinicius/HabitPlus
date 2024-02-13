@@ -9,25 +9,30 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State private var state: SplashUIState = .loading
+    @ObservedObject var viewModel : SplashViewModel
     
     var body: some View {
         
-        switch state {
-        case .loading:
-            loadingView()
-        case .goToSignInScreen:
-            Text("Carregar tela de login")
-        case .goToHomeScreen:
-            Text("Carregar tela principal")
-        case.error(let msg):
-            Text("Mensagem de Erro: \(msg)")
-        }
+        Group{
+            switch viewModel.uiState {
+            case .loading:
+                loadingView()
+            case .goToSignInScreen:
+                Text("Carregar tela de login")
+            case .goToHomeScreen:
+                Text("Carregar tela principal")
+            case.error(let msg):
+                Text("Mensagem de Erro: \(msg)")
+            }
+        }.onAppear(perform: {
+            print("Vai disparar a função onAppear na ViewModel")
+            viewModel.onAppear()
+        })
     }
 }
 
 #Preview {
-    SplashView()
+    SplashView(viewModel: SplashViewModel())
 }
 
 
