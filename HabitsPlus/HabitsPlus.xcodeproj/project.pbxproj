@@ -15,6 +15,7 @@
 		19D403E82B7BAA9E0006EFCD /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D403E72B7BAA9E0006EFCD /* SplashViewModel.swift */; };
 		19D403EE2B7BBD4C0006EFCD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D403ED2B7BBD4C0006EFCD /* SignInView.swift */; };
 		19D403F02B7BBD890006EFCD /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D403EF2B7BBD890006EFCD /* SignInViewModel.swift */; };
+		19D403F22B7BC7E80006EFCD /* SplashViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D403F12B7BC7E80006EFCD /* SplashViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		19D403E72B7BAA9E0006EFCD /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		19D403ED2B7BBD4C0006EFCD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		19D403EF2B7BBD890006EFCD /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		19D403F12B7BC7E80006EFCD /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,9 @@
 		19CCF2C22B7AD1D200DF534A /* Slash */ = {
 			isa = PBXGroup;
 			children = (
+				19CCF2C32B7AD1DB00DF534A /* View */,
 				19CCF2C52B7AD1EB00DF534A /* ViewModel */,
 				19CCF2C42B7AD1E400DF534A /* Model */,
-				19CCF2C32B7AD1DB00DF534A /* View */,
 			);
 			path = Slash;
 			sourceTree = "<group>";
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				19D403E72B7BAA9E0006EFCD /* SplashViewModel.swift */,
+				19D403F12B7BC7E80006EFCD /* SplashViewRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -113,9 +116,9 @@
 		19D403E92B7BBCCE0006EFCD /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				19D403EA2B7BBCFD0006EFCD /* View */,
 				19D403EC2B7BBD0C0006EFCD /* ViewModel */,
 				19D403EB2B7BBD030006EFCD /* Model */,
-				19D403EA2B7BBCFD0006EFCD /* View */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				19D403F02B7BBD890006EFCD /* SignInViewModel.swift in Sources */,
 				19CCF2B52B7ACE0A00DF534A /* HabitsPlusApp.swift in Sources */,
 				19CCF2C72B7AD22200DF534A /* SplashView.swift in Sources */,
+				19D403F22B7BC7E80006EFCD /* SplashViewRouter.swift in Sources */,
 				19D403EE2B7BBD4C0006EFCD /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

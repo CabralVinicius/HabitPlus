@@ -9,15 +9,18 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @ObservedObject var sigInViewModel: SignInViewModel
+    @ObservedObject var viewModel: SignInViewModel
     
     var body: some View {
         Text("Tela de Login")
             .padding(60)
             .background(.blue)
+            .onAppear(){
+                print("Mudou para a tela de SignInView")
+            }
     }
 }
 
 #Preview {
-    SignInView(sigInViewModel: SignInViewModel())
+    SignInView(viewModel: SignInViewModel())
 }
