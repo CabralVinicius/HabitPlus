@@ -23,6 +23,7 @@ struct SplashView: View {
                 
             case .goToHomeScreen:
                 Text("Carregar tela principal")
+                
             case.error(let msg):
                 Text("Mensagem de Erro: \(msg)")
             }
