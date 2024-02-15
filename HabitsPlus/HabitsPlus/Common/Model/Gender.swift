@@ -12,7 +12,7 @@ enum Gender: String, CaseIterable, Identifiable {
     case male = "Masculino"
     case female = "Feminino"
     
-    var id: String {
+    var id: String {// o id vai pegar o identificador (por isso do rawValue)
         self.rawValue
     }
 }

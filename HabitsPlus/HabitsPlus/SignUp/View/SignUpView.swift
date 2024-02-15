@@ -24,6 +24,8 @@ struct SignUpView: View {
     @State var birthday = ""
     @State var gender = Gender.male
     
+    @ObservedObject var viewModel : SignUpViewModel
+    
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
@@ -40,13 +42,22 @@ struct SignUpView: View {
                         documentField
                         phoneField
                         birthdayField
+                        
                         genderField
+                        
                         saveButton
                     }
                     
                     Spacer()
                 }.padding(.horizontal, 8)
             }.padding(20)
+            if case SignUpUIState.error(let value) = viewModel.uiState {
+                Text("")
+                    .alert(isPresented: .constant(true)) {
+                        Alert(title: Text("Habit"), message: Text(value), dismissButton: .default(Text("OK")){
+                        })
+                    }
+            }
         }
     }
 }
@@ -55,7 +66,7 @@ extension SignUpView {
     var fullNameField: some View {
         TextField("", text: $fullName)
             .border(Color.black)
-
+        
     }
 }
 
@@ -98,23 +109,31 @@ extension SignUpView {
 extension SignUpView {
     var saveButton: some View {
         Button("Realize o seu Cadastro"){
-            // ViewModel. ??
+            viewModel.signUp()
         }
     }
 }
 
 extension SignUpView {
     var genderField: some View {
-        Picker("Gender", selection: $gender) {
+        Picker("Gender", selection: $gender) {// Picker é um seletor que vai ser baseado em uma lista de generos pré definidos (Por isso que usamos os protocolos de CaseIterable e Identifiable)
             ForEach(Gender.allCases, id: \.self) { value in
                 Text(value.rawValue)
-                    .tag(/*@START_MENU_TOKEN@*/"Tag"/*@END_MENU_TOKEN@*/)
+                    .tag(value)
+                
+                /*
+                 ForEach([1,2,3,4,5], id: \.self) { number in
+                 Text("\(number)")
+                 Exemplo para lembrar do ForEach
+                 }*/
             }
-        }
+        }.pickerStyle(.segmented)
+            .padding(.top, 16)
+            .padding(.bottom, 32)
     }
 }
 
 
 #Preview {
-    SignUpView()
+    SignUpView(viewModel: SignUpViewModel())
 }
