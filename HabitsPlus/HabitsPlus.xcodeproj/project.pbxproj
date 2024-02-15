@@ -23,6 +23,8 @@
 		19D404042B7D2DDC0006EFCD /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D404032B7D2DDC0006EFCD /* SignUpView.swift */; };
 		19D404062B7D2DEF0006EFCD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D404052B7D2DEF0006EFCD /* SignUpViewModel.swift */; };
 		19D4040A2B7D42070006EFCD /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D404092B7D42070006EFCD /* Gender.swift */; };
+		19D4A6852B7DAA680082D6D3 /* SignUpUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4A6842B7DAA680082D6D3 /* SignUpUIState.swift */; };
+		19D4A6872B7DAC010082D6D3 /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4A6862B7DAC010082D6D3 /* SignUpViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		19D404032B7D2DDC0006EFCD /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		19D404052B7D2DEF0006EFCD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		19D404092B7D42070006EFCD /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		19D4A6842B7DAA680082D6D3 /* SignUpUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIState.swift; sourceTree = "<group>"; };
+		19D4A6862B7DAC010082D6D3 /* SignUpViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,7 @@
 		19D404002B7D2D8D0006EFCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				19D4A6842B7DAA680082D6D3 /* SignUpUIState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				19D404052B7D2DEF0006EFCD /* SignUpViewModel.swift */,
+				19D4A6862B7DAC010082D6D3 /* SignUpViewRouter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -320,6 +326,8 @@
 				19D403E82B7BAA9E0006EFCD /* SplashViewModel.swift in Sources */,
 				19D404062B7D2DEF0006EFCD /* SignUpViewModel.swift in Sources */,
 				19D403FE2B7D27E80006EFCD /* HomeViewModel.swift in Sources */,
+				19D4A6872B7DAC010082D6D3 /* SignUpViewRouter.swift in Sources */,
+				19D4A6852B7DAA680082D6D3 /* SignUpUIState.swift in Sources */,
 				19CCF2C92B7AD3BB00DF534A /* SplashUIState.swift in Sources */,
 				19D403F02B7BBD890006EFCD /* SignInViewModel.swift in Sources */,
 				19D404042B7D2DDC0006EFCD /* SignUpView.swift in Sources */,
