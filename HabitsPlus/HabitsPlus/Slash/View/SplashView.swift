@@ -17,6 +17,7 @@ struct SplashView: View {
             switch viewModel.uiState {
             case .loading:
                 loadingView()
+                
             case .goToSignInScreen:
                 // Nabegar para a proxima tela
                 viewModel.signInView()
@@ -25,7 +26,7 @@ struct SplashView: View {
                 Text("Carregar tela principal")
                 
             case.error(let msg):
-                Text("Mensagem de Erro: \(msg)")
+                loadingView(error: msg)
             }
         }.onAppear(perform: {
             print("Vai disparar a função onAppear na ViewModel")
@@ -70,13 +71,14 @@ extension SplashView {
                 .padding(20)
                 .ignoresSafeArea()
                 .background(.blue)
+            
         }
     }
 }
 
 // 3. Usando funções em extenções
 extension SplashView {
-    func loadingView() -> some View {
+    func loadingView(error: String? = nil) -> some View {
         ZStack{
             Image("Logo")
                 .resizable()
@@ -85,6 +87,15 @@ extension SplashView {
                 .padding(20)
                 .ignoresSafeArea()
                 .background(.green)
+            
+            if let error {
+             Text("")
+                    .alert(isPresented: .constant(true)) {
+                        Alert(title: Text("Habit"), message: Text(error), dismissButton: .default(Text("Ok")){
+                          // Faz algo quando some o alerta
+                        })
+                    }
+            }
         }
     }
 }
