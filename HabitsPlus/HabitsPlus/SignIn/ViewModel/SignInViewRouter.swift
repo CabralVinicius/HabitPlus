@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 enum SignInViewRouter {
     static func makeHomeView() -> some View {// Essa função vai construir uma view, por isso do retorno da some View
@@ -17,7 +18,9 @@ enum SignInViewRouter {
             }
     }
     
-    static func makeSignUpView() -> some View {
-     return SignUpView(viewModel: SignUpViewModel())
+    static func makeSignUpView(publisher: PassthroughSubject<Bool, Never>!) -> some View {
+        let viewModel = SignUpViewModel()
+        viewModel.publisher = publisher
+        return SignUpView(viewModel: viewModel)
     }
 }

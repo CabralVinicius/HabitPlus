@@ -5,10 +5,12 @@
 //  Created by Vinicius Cabral on 14/02/24.
 //
 
-import Foundation
 import SwiftUI
+import Combine
 
 class SignUpViewModel: ObservableObject {
+    
+    var publisher: PassthroughSubject<Bool, Never>!
     @Published var uiState : SignUpUIState = .none
     
     func signUp() {
@@ -16,7 +18,8 @@ class SignUpViewModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             //self.uiState = .error("Usuario já existente")
-            self.uiState = .goToHomeScreen
+            self.uiState = .success
+            self.publisher.send(true)
         }
     }
     

@@ -25,6 +25,7 @@
 		19D4040A2B7D42070006EFCD /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D404092B7D42070006EFCD /* Gender.swift */; };
 		19D4A6852B7DAA680082D6D3 /* SignUpUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4A6842B7DAA680082D6D3 /* SignUpUIState.swift */; };
 		19D4A6872B7DAC010082D6D3 /* SignUpViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4A6862B7DAC010082D6D3 /* SignUpViewRouter.swift */; };
+		19FFE87D2B7EA1B9004D5E86 /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FFE87C2B7EA1B9004D5E86 /* EditTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		19D404092B7D42070006EFCD /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		19D4A6842B7DAA680082D6D3 /* SignUpUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUIState.swift; sourceTree = "<group>"; };
 		19D4A6862B7DAC010082D6D3 /* SignUpViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewRouter.swift; sourceTree = "<group>"; };
+		19FFE87C2B7EA1B9004D5E86 /* EditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 		19D404072B7D41E90006EFCD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				19FFE87B2B7EA1A0004D5E86 /* View */,
 				19D404082B7D41F60006EFCD /* Model */,
 			);
 			path = Common;
@@ -251,6 +254,14 @@
 				19D404092B7D42070006EFCD /* Gender.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		19FFE87B2B7EA1A0004D5E86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19FFE87C2B7EA1B9004D5E86 /* EditTextView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				19CCF2B52B7ACE0A00DF534A /* HabitsPlusApp.swift in Sources */,
 				19CCF2C72B7AD22200DF534A /* SplashView.swift in Sources */,
 				19D403F42B7C16DF0006EFCD /* SignInUIState.swift in Sources */,
+				19FFE87D2B7EA1B9004D5E86 /* EditTextView.swift in Sources */,
 				19D403F22B7BC7E80006EFCD /* SplashViewRouter.swift in Sources */,
 				19D403EE2B7BBD4C0006EFCD /* SignInView.swift in Sources */,
 			);

@@ -5,13 +5,29 @@
 //  Created by Vinicius Cabral on 13/02/24.
 //
 
-import Foundation
 import SwiftUI
-
+import Combine
 
 class SignInViewModel: ObservableObject {
     
+    private var cancellable: AnyCancellable?
+    private var publisher = PassthroughSubject<Bool, Never>()
+    
     @Published var uiState: SignInUIState = .none
+    
+    init() {
+        cancellable = publisher.sink { value in
+            print("Usuario criado! goToHome: \(value)")
+            
+            if value {
+                self.uiState = .goToHomeScreen
+            }
+        }
+    }
+    
+    deinit {
+        cancellable?.cancel()
+    }
     
     func login(email: String, password: String) {
         
@@ -29,6 +45,6 @@ extension SignInViewModel {
     }
     
     func signUpView() -> some View {
-        return SignInViewRouter.makeSignUpView()
+        return SignInViewRouter.makeSignUpView(publisher: publisher)
     }
 }
